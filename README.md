@@ -3,4 +3,5 @@
 Mola kısmının çalışmasını kontrol edemedim henüz ama sorun yoktur diye umuyorum:p
 
 lang=py
+
 library=tkinter
