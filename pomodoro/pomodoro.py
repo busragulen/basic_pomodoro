@@ -94,7 +94,7 @@ countdown.pack(pady=15)
 start=Button(window,text="Başla.", font=("Times New Roman",20),command=start_60)
 start.pack(pady=10) 
 
-#pady, tkinter kütüphanesinn bir şeysisi. y ekseninde alınacak pikseli belirtiyor. 
+# pady, tkinter kütüphanesinn bir şeysisi. y ekseninde alınacak pikseli belirtiyor. 
 # eğer 700x700lük bir window açacaksanız bence pady değerinin 60 olması ideal,
 # ben 400x400lük açmak istediğim ve daha kompakt bir görünüm sevdiğim için 10 yaptım :p
 
