@@ -20,7 +20,7 @@ def clocksize(m, s): # def ile ihtiyaçlarımıza yönelik func oluşturuyoruz
     return mstr+":"+sstr
 
 def start_60(): #çalışma süresi func'u
-    global conting
+    global counting
     global bell
     start["state"]="disabled"
 
@@ -44,10 +44,10 @@ def start_60(): #çalışma süresi func'u
             bell=True
             start_15()
             return
-    conting=window.after(1000, start_60)
+    counting=window.after(1000, start_60)
 
 def start_15(): #mola func'u
-    global conting
+    global counting
     global bell
 
     if bell:
@@ -71,12 +71,12 @@ def start_15(): #mola func'u
             bell=True
             start_60()
             return
-    conting=window.after(1000, start_15)
+    counting=window.after(1000, start_15)
 
 def wait(): #durdurma func'u
     start["state"]="active"
     try:
-        window.after_cancel(conting)
+        window.after_cancel(counting)
         status.config(text="Durdu.")
     except NameError:
         return
@@ -84,7 +84,7 @@ def wait(): #durdurma func'u
 def reset(): # timer'ı resetlemek için func
     wait()
     countdown.config(text="60:00")
-    status.config(text="Başlatılmadı.")
+    status.config(text="Başlat.")
 
 status=Label(window, text="Başlat.", font=("Times New Roman",20)) #default
 status.pack(pady=15)
@@ -101,7 +101,7 @@ start.pack(pady=10)
 pause=Button(window,text="Durdur.", font=("Times New Roman",20),command=wait)
 pause.pack(pady=10)
 
-reset=Button(window,text="Resetle", font=("Times New Roman",20),command=reset)
+reset=Button(window,text="Resetle.", font=("Times New Roman",20),command=reset)
 reset.pack(pady=10)
 
 
